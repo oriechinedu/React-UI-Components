@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from './Icon'
 import './Footer.css';
 
 
@@ -6,10 +7,10 @@ function footer() {
   return (
     <footer className="footer">
       <ul>
-        <li> <i className="far fa-comment"></i></li>
-        <li> <i className="fas fa-retweet"></i> <span> 6</span></li>
-        <li> <i className="far fa-heart"></i> <span> 4</span></li>
-        <li><i className="far fa-envelope"></i></li>
+        <Icon iconName="far fa-comment" />
+        <Icon iconName="fas fa-retweet"><span> 6</span></Icon>
+        <Icon iconName="far fa-heart"><span> 4</span></Icon>
+        <Icon iconName="far fa-envelope" />
       </ul>
     </footer>
   )
