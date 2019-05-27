@@ -3,6 +3,11 @@
 .header {
   display: flex;
 }
+@media all and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}
 
 h2 {
   margin: 0;
@@ -16,6 +21,7 @@ h2 {
 .header-title span.dot {
   vertical-align: middle;
   padding-bottom: 50px;
+  line-height: 3rem;
 }
 
 .header-text > p {
