@@ -1,0 +1,26 @@
+.footer {
+  margin-top: 2rem;
+}
+.footer ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-left: 11rem;
+}
+
+.footer ul li {
+  list-style: none;
+  padding:  1rem 3rem;
+  color: gray;
+}
+.footer ul li:hover {
+  cursor: pointer;
+}
+.footer ul li i{
+  font-size: 2rem;
+}
+
+.footer ul li span {
+  padding-left: 0.8rem;
+  font-size: 1.5rem;
+}
