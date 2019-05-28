@@ -3,11 +3,11 @@ import './Display.css';
 import ButtonContainer from '../ButtonComponents/ButtonContainer'
 import ControlButton from '../ButtonComponents/ControlButton'
 
-function calculatorBody({ children}) {
+function calculatorBody({ children, clicked}) {
   return (
     <div className="calc-body">
-      <ButtonContainer />
-      <ControlButton />
+      <ButtonContainer clicked={clicked}/>
+      <ControlButton clicked={clicked} />
     </div>
   )
 }
