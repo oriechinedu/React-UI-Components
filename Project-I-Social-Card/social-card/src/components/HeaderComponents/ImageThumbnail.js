@@ -1,6 +1,4 @@
 import React from 'react';
-import './Header.css';
-
 function imageThumbnail() {
   return (
     <div className="image-thumbnail">
@@ -8,5 +6,4 @@ function imageThumbnail() {
     </div>
   )
 }
-
 export default imageThumbnail;

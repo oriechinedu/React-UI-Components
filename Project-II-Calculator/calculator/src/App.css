@@ -1,0 +1,13 @@
+.app {
+  width: 400px;
+  height: 512px;
+  border: 1px solid gray;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+@media all and (max-width: 500px) {
+  .app {
+    width: 300px;
+  }
+}

@@ -1,6 +1,4 @@
 import React from 'react';
-import './Header.css';
-
 function headerText({ children}) {
   return (
     <div className="header-text">
