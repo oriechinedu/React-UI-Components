@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay'
 import CalculatorBody from './components/DisplayComponents/CalculatorBody'
 
-const App = () => {
-  return (
-    <div className="app">
-      <CalculatorDisplay value="9" />
+
+export default class App extends React.Component {
+  state = {
+    result: 0,
+  }
+  render() {
+    return (
+      <div className="app">
+      <CalculatorDisplay value={this.state.result} />
       <CalculatorBody />
     </div>
-  );
-};
-
-export default App;
+    )
+  }
+}

@@ -1,3 +1,7 @@
+
+button:hover {
+  cursor: pointer;
+}
 .action-btn {
   width: 100%;
   text-align: center;

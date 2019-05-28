@@ -1,9 +1,9 @@
 import React from 'react';
 import './Button.css';
 
-export default function actionButton({ clicked, type, children}) {
+export default function actionButton({ clicked, type, text}) {
   const style = {
-    fontWeight: type === 'clear' ? 'initial': 'bold'
+    fontWeight: type === 'clear' ? '100': 'bold'
   }
   return (
     <button 
@@ -11,7 +11,7 @@ export default function actionButton({ clicked, type, children}) {
     onClick={clicked}
     style={style}
     >
-      {children}
+      {text}
     </button>
   )
 }

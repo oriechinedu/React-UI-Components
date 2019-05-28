@@ -7,9 +7,9 @@ export default function buttonContainer() {
   
   return (
     <div className='btn-container'>
-      <ActionButton type="clear">Clear</ActionButton>
+      <ActionButton type="clear" text="Clear" />
       <ButtonGroup />
-      <ActionButton type="zero">0</ActionButton>
+      <ActionButton type="zero" text="0" />
     </div>
   )
 }

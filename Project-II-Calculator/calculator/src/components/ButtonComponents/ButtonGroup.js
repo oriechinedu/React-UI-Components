@@ -7,7 +7,7 @@ export default function buttonGroup() {
   return (
     <div className='btn-group'>
       {numbers.map((num,i) => {
-        return <NumberButton key={`${num}${i}`}>{num}</NumberButton>
+        return <NumberButton key={`${num}${i}`} text={num} />
       })}
     </div>
   )

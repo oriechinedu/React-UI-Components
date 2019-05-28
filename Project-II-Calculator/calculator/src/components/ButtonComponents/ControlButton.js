@@ -7,7 +7,7 @@ export default function buttonGroup() {
   return (
     <div className='btn-control'>
       {symbols.map((sym,i) => {
-        return <NumberButton key={`${sym}-${i}`} symbol>{sym}</NumberButton>
+        return <NumberButton key={`${sym}-${i}`} symbol text={sym} />
       })}
     </div>
   )

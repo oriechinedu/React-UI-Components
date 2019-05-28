@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
 
-export default function numberButton({ clicked, children, symbol }) {
+export default function numberButton({ clicked, text,symbol }) {
   let style = {
     backgroundColor:'white',
   }
@@ -17,7 +17,7 @@ export default function numberButton({ clicked, children, symbol }) {
       onClick={clicked}
       style={style}
     >
-      {children}
+      {text}
     </button>
   )
 }
