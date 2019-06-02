@@ -10,6 +10,7 @@ export default function actionButton({ clicked, type, text}) {
     className="action-btn"
     onClick={clicked}
     style={style}
+    data-value={type === 'clear'? 'clear': 0}
     >
       {text}
     </button>

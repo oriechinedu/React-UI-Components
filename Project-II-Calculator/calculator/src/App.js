@@ -1,61 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import * as math from 'mathjs'
 import './App.css';
 import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay'
 import CalculatorBody from './components/DisplayComponents/CalculatorBody'
 
-const OPERATORS = ['÷', '×', '−', '+', '=' ];
-export default class App extends React.Component {
-  state = {
-    result: 0,
-  }
-  clickHandler = ({ target}) => {
-    this.setState(prevState => {
+ const App = () => {
+  const [state, setState] = useState({ result: '' });
+  const clickHandler = ({ target }) => {
+    setState(prevState => {
 
-      let value = target.textContent;
-      if (Number(value)) {
+      let value = target.dataset.value;
+
+      if (Number(value) || Number(value) === 0) {
         return {
-          result: `${prevState.result}${value}`
+          result: `${prevState.result === '0' ? '' : prevState.result}${value}`
         }
-      } else if(value === 'Clear') {
+      } else if (value === 'clear') {
         return {
-          result: 0,
+          result: '0',
         }
-      } else if (value ==='=') {
-        const [operand1, operator, operand2] = prevState.result.split(' ');
-        switch(operator) {
-          case OPERATORS[0]:
-            return {
-              result: operand1 / operand2,
-            }
-            case OPERATORS[1]:
-            return {
-              result: operand1 * operand2,
-            }
-
-            case OPERATORS[2]:
-            return {
-              result: operand1 - operand2,
-            }
-            case OPERATORS[3]:
-            return {
-              result: operand1 + operand2,
-            }
-            default:
-            return prevState
+      } else if (value === '=') {
+        try {
+          return {
+            result: math.eval(prevState.result),
+          }
+        } catch (e) {
+          return {
+            result: `${prevState.result}`
+          }
         }
-
       }
-      return {
-        result: `${prevState.result} ${value} `
+      else {
+        return {
+          result: `${prevState.result} ${value} `
+        }
       }
     })
   }
-  render() {
-    return (
-      <div className="app">
-      <CalculatorDisplay value={this.state.result} />
-      <CalculatorBody  clicked={this.clickHandler} />
+  return (
+    <div className="app">
+      <CalculatorDisplay value={state.result} />
+      <CalculatorBody clicked={clickHandler} />
     </div>
-    )
-  }
+  )
 }
+export default App;
